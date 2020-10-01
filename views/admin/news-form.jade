@@ -2,12 +2,15 @@ extends ../layout
 
 block content
   h1= title
+  if error != undefined
+    each message in error.errors
+        p= message
   form(method='post')
     p
-        label Tytuł 
-        input(type='text' name='title')
+        label TYTUŁ 
+        input(type='text' name='title' value=body.title || '')
     p
-        label Treść 
-        input(type='textarea' name='description')
+        label OPIS 
+        input(type='textarea' name='description' value=body.description || '')
     p
         input(type='submit' value='Wyślij')
