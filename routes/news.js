@@ -4,12 +4,15 @@ const News = require('../models/news');
 
 /* GET news */
 router.get('/', (req, res) => {
-    const exampleNews = new News({
-        title: 'Przykladowy tytul',
-        description: 'Przykladowy opis'
-    });
-    exampleNews.save();
-    res.render('news', { title: 'Aktualności' });
+    const search = req.query.search || '';
+
+    const findNews = News
+        .find({ title: new RegExp(search.trim(), 'i') })
+        .sort({ created: -1 })
+        ;
+    findNews.exec((err, data) => {
+        res.render('news', { title: 'Aktualności', data, search });
+    })
 });
 
 module.exports = router;
