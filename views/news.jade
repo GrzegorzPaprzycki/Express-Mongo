@@ -8,6 +8,6 @@ block content
   each item in data
     article
       h2=item.title
-      p=item.created
+      p=moment(item.created).format("YYYY-MM-DD HH:mm")
       p=item.description
 

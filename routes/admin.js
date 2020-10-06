@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/news/add', (req, res) => {
-    res.render('admin/news-form', { title: 'Dodaj news', body: {} });
+    res.render('admin/news-form', { title: 'Dodaj artykuł', body: {} });
 })
 
 router.post('/news/add', (req, res) => {

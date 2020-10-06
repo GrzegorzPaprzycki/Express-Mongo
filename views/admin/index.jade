@@ -6,16 +6,19 @@ block content
     ul
       li
         a(href='admin/news/add') Dodaj artykuł
-  table
-    tr
-      th Id
-      th Tytuł
-      th Data dodania
-      th Akcja
-    each item, index in news
+  if news.length
+    table
       tr
-        td=index
-        td=item.title
-        td=item.created
-        td
-          a(href='admin/news/delete/' + item._id) Usuń
+        th Id
+        th Tytuł
+        th Data dodania
+        th Akcja
+      each item, index in news
+        tr
+          td #{index + 1}
+          td=item.title
+          td=moment(item.created).format("YYYY-MM-DD HH:mm")
+          td
+            a(href='admin/news/delete/' + item._id) Usuń
+  else
+    p Brak artykułów w bazie danych

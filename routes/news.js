@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         ;
 
     findNews.exec((err, data) => {
-        res.render('news', { title: 'Aktualności', data, browser });
+        res.render('news', { title: 'Artykuły', data, browser });
     })
 });
 
