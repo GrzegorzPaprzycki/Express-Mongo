@@ -9,9 +9,10 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    ul
-      +route('/', 'Strona główna')
-      +route('/news', 'Artykuły')
-      +route('/quiz', 'Quiz')
-      +route('/admin', 'Admin')
+    nav(class='main')
+      ul
+        +route('/', 'Strona główna')
+        +route('/news', 'Artykuły')
+        +route('/quiz', 'Quiz')
+        +route('/admin', 'Admin')
     block content
