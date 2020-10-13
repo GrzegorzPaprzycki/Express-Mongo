@@ -2,11 +2,14 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box; 
+ color: #666666;
 }
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+/* Main navigation */
 
 nav.main ul {
   display: flex;
@@ -59,3 +62,33 @@ nav.main .active {
   background-position: bottom center;
   color: #eee;
 }
+
+/* Main page */
+
+body section {
+  margin: 15vh 20vw;
+  width: 60vw;
+}
+
+section h1 {
+  margin-bottom: 10vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
+section div {
+  margin-bottom: 10vh;
+}
+
+section div p {
+  line-height: 1.5rem;
+}
+
+section div.leftParagraphs {
+  text-align: left;
+}
+
+section div.rightParagraphs {
+  text-align: right;
+}
+

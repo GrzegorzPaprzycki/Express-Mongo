@@ -1,7 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Witam w aplikacji opartej na MongoDB i Expressie.
-  p Przed Tobą możliwość przeglądania, dodawania oraz usuwania artykułów. Dwie ostatnie opcje dostępne są wyłącznie z poziomu admina (login: admin, hasło: 1234). Koniecznie zostaw odpowiedź w quizie. 
-  p Dobrej zabawy!
+  section(class='mainPage')
+    h1= title
+    div(class='leftParagraphs')
+      p Witam w aplikacji opartej na MongoDB i Expressie.
+      p Przed Tobą możliwość przeglądania, dodawania oraz usuwania artykułów. 
+      p Dwie ostatnie opcje dostępne są wyłącznie z poziomu admina (login: admin, hasło: 1234). 
+    hr
+    div(class='rightParagraphs')
+      p Koniecznie zostaw odpowiedź w quizie. 
+      p Dobrej zabawy!
