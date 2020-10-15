@@ -66,12 +66,12 @@ nav.main .active {
 /* Main page */
 
 body section {
-  margin: 15vh 20vw;
+  margin: 10vh 20vw;
   width: 60vw;
 }
 
-section h1 {
-  margin-bottom: 10vh;
+h1 {
+  margin-bottom: 5vh;
   text-align: center;
   font-size: 2rem;
 }
@@ -85,6 +85,7 @@ section div p {
 }
 
 section div.leftParagraphs {
+  margin-top: 10vh;
   text-align: left;
 }
 
@@ -92,3 +93,189 @@ section div.rightParagraphs {
   text-align: right;
 }
 
+/* News page */
+
+section form {
+  text-align: center;
+}
+
+section form.search input:first-child {
+  height: 26px;
+  margin-right: 20px;
+}
+
+section form .submit {
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 4px;
+  border: 2px solid rgba(0,114,188,1);
+  color: rgba(0,114,188,1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+section form .submit:hover {
+border-radius: 13px;
+border-color: #666;
+color: #666;
+}
+
+section article {
+  position: relative;
+  margin: 20px 0 40px;
+}
+
+article h2 {
+  color: #ea6655; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 38px; 
+  font-weight: 100; 
+  line-height: 44px; 
+  letter-spacing: 1px; 
+  padding: 0 0 20px; 
+  border-bottom: double #666;
+}
+
+article .date {
+  color: #666; 
+  background: white; 
+  display: inline-block; 
+  font-family: 'Georgia', serif; 
+  font-style: italic; 
+  font-size: 16px; 
+  line-height: 20px; 
+  margin: 0 0 20px 18px; 
+  padding: 10px 10px 8px; 
+  position: absolute; 
+  top: 45px;
+}
+
+article .text {
+  padding: 20px 0;
+  text-indent: 15px;
+  font-size: 14px;
+  line-height: 22px;
+
+}
+
+/* Quiz page */
+
+.quizPage {
+  text-align: center;
+}
+
+.quizPage h2 {
+  color: #bb449e; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 28px; 
+  font-weight: 100; 
+  line-height: 34px; 
+  letter-spacing: 1px; 
+  padding: 0 0 20px; 
+  border-bottom: double #666;
+}
+
+.quizPage h3 {
+  margin: 5vh;
+}
+
+.quizPage ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 0;
+}
+
+.quizPage li {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.quizPage li input {
+  margin: 0 5px;
+  height: 16px;
+  vertical-align: -3px;
+}
+
+.quizPage p {
+  margin: 2vh 0;
+}
+
+/* Login page */
+
+.loginPage form p {
+  margin: 10px;
+}
+
+/* Admin page */
+
+.adminPage {
+  text-align: center;
+}
+
+.adminPage>a {
+  display: block;
+  width: 15vw;
+  height: 30px;
+  border: 1px solid #4CAF50;
+  margin: 10px auto;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.adminPage>a:hover {
+  letter-spacing: 1px;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.adminPage table {
+  margin: 15px auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #666;
+}
+
+th, td {
+  padding: 5px;
+}
+
+th {
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  height: 30px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* News add page */
+
+.articleField {
+  width: 25vw;
+}
+
+textarea {
+  height: 15vh;
+}
+
+.addArticle label {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+.addArticle .description {
+  line-height: 15vh;
+}

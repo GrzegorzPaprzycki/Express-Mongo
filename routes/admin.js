@@ -29,7 +29,7 @@ router.post('/news/add', (req, res) => {
 
     newsData.save((err) => {
         if (err) {
-            res.render('admin/news-form', { title: 'Dodaj news', bugs, body });
+            res.render('admin/news-form', { title: 'Dodaj artykuł', bugs, body });
         } else {
             res.redirect('/admin');
         }

@@ -1,24 +1,22 @@
 extends ../layout
 
 block content
-  h1= title
-  nav
-    ul
-      li
-        a(href='admin/news/add') Dodaj artykuł
-  if news.length
-    table
-      tr
-        th Id
-        th Tytuł
-        th Data dodania
-        th Akcja
-      each item, index in news
+  section(class='adminPage')
+    h1= title
+    a(href='admin/news/add') Dodaj artykuł
+    if news.length
+      table
         tr
-          td #{index + 1}
-          td=item.title
-          td=moment(item.created).format("YYYY-MM-DD HH:mm")
-          td
-            a(href='admin/news/delete/' + item._id) Usuń
-  else
-    p Brak artykułów w bazie danych
+          th Id
+          th Tytuł
+          th Data dodania
+          th Akcja
+        each item, index in news
+          tr
+            td #{index + 1}
+            td=item.title
+            td=moment(item.created).format("YYYY-MM-DD HH:mm")
+            td
+              a(href='admin/news/delete/' + item._id) Usuń
+    else
+      p Brak artykułów w bazie danych

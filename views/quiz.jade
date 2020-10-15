@@ -1,24 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  if show
-    form(method='post')
-      h2 Jaki jest Twój ulubiony kolor?
+  section(class='quizPage')
+    h1= title
+    if show
+      form(method='post')
+        h2 Jaki jest Twój ulubiony kolor?
+        ul
+          each item in data
+            li
+              label=item.title
+              input(type='radio' name='quiz' value=item._id)
+        p Odpowiedzi zostaną pokazane po oddaniu głosu
+        input(type='submit' value='Zagłosuj' class='submit')
+    else
+      h2 Oddałeś swój głos.
+      h3 Wyniki
       ul
-      each item in data
-        li
-          label=item.title
-          input(type='radio' name='quiz' value=item._id)
-      p Odpowiedzi zostaną pokazane po oddaniu głosu
-      input(type='submit' value='Zagłosuj')
-  else
-    h2 Oddałeś swój głos.
-    p Wyniki
-    ul
-    each item in data
-      li #{item.title} - #{item.vote} głosów (#{Math.round(item.vote/sum*100)}%)
-    p Oddano #{sum} głosów.
-
-
-
+        each item in data
+          li #{item.title} - #{item.vote} głosów (#{Math.round(item.vote/sum*100)}%)
+      p Oddano głosów: #{sum}
