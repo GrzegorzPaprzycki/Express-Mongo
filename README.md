@@ -11,3 +11,7 @@ Dwie ostatnie opcje dostępne są wyłącznie z poziomu admina (login: admin, ha
 
 Koniecznie zostaw odpowiedź w quizie.
 Dobrej zabawy! :)
+
+---
+
+P.S. Projekt powstał w oparciu o materiały szkoleniowe SamurajProgramowania.
